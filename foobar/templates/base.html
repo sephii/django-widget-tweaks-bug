@@ -1,0 +1,9 @@
+{% load widget_tweaks %}
+
+<html>
+  <body>
+    Working field: {{ form.foo|attr:"title:hello" }}
+    Non-working field:
+    {% include "_field.html" with field=form.foo|attr:"title:hello" %}
+  </body>
+</html>
